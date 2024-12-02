@@ -19,7 +19,7 @@ def main(page: ft.Page): # Esses ":" definem o tipo da variável, poderia ser "i
 
     # Criar itens da página
     botao_menos = ft.IconButton(ft.icons.REMOVE, on_click=diminuir)
-    caixa_texto = ft.TextField(value="0", width=100, text_align=ft.TextAlign.CENTER)
+    caixa_texto = ft.TextField(value="0", width=100, text_align=ft.TextAlign.CENTER, color="#E3116C")
     botao_mais = ft.IconButton(ft.icons.ADD, on_click=somar)
 
 
