@@ -3,22 +3,26 @@ import flet as ft
 def main(page: ft.Page):
 
     def consulta_cnpj(e):
-        import requests
-        import json
-        
-        url = f"https://economia.awesomeapi.com.br/json/last/{selecao.value}-BRL"
 
-        r = requests.get(url=url)
-        r = r.json()
+        valor_informado = box.value
 
-        cotacao = r[f"{selecao.value}BRL"]["bid"]
+        if type(valor_informado) != int:
+            novo_texto = "Digite apenas Números"
+        else:
+            import requests
+            import json
+            
+            url = f"https://economia.awesomeapi.com.br/json/last/{selecao.value}-BRL"
 
-        valor_entrada = box.value()
-        if not isnumber(valor_a_converter):
+            r = requests.get(url=url)
+            r = r.json()
 
-        valor = 
+            cotacao = float(r[f"{selecao.value}BRL"]["bid"])
 
-        novo_texto = f"Resultado: R$ {float(cotacao):,.2f}"
+            valor = valor_informado * cotacao
+
+            novo_texto = f"Resultado: R$ {float(valor):,.2f}"
+
         caixa_resposta.value = novo_texto
         page.update()
 
