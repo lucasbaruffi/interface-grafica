@@ -17,14 +17,16 @@ def main(page: ft.Page):
 
 
     escolha_moeda = ft.Text(
-    "Escolha a Moeda:", 
-    font_family="Montserrat",
-    size=31,
-    weight=ft.FontWeight.W_100
+        "Escolha a Moeda:", 
+        font_family="Montserrat",
+        size=31,
+        weight=ft.FontWeight.W_100
     )
     
     selecao = ft.Dropdown(
-        value="Opções", color="White",
+        value="Opções", 
+        color="White", 
+        border_color="White",
         options=[
             ft.dropdown.Option("Op1"),
             ft.dropdown.Option("Op2"),
@@ -33,7 +35,25 @@ def main(page: ft.Page):
     page.add(ft.Row([escolha_moeda, selecao]))
 
 
-    pass
+
+    valor_a_converter = ft.Text(
+        "Valor a Converter:", 
+        font_family="Montserrat",
+        size=31,
+        weight=ft.FontWeight.W_100
+    )
+    
+    box = ft.TextField(
+        border_color="White"
+    )
+
+    page.add(ft.Row([valor_a_converter, box]))
+
+    page.add(ft.Row())
+
+    botao_converter = ft.TextButton("Converter")
+
+    page.add(ft.Row([botao_converter]))
 
 
 ft.app(target=main)
