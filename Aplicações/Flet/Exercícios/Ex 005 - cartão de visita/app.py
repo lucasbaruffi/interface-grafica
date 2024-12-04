@@ -2,6 +2,17 @@ import flet as ft
 
 def main(page: ft.Page):
 
+    def seguir(e):
+        if btnSeguir.content.value == "Seguir":
+            btnSeguir.content.value = "Deixar de Seguir"
+            btnSeguir.content.weight = "normal"
+            btnSeguir.bgcolor = "#ABABAB"
+        else:
+            btnSeguir.content.value = "Seguir"
+            btnSeguir.content.weight = "bold"
+            btnSeguir.bgcolor = "#007BFF"
+        page.update()
+
     page.fonts = {
         "Inter": "Exercícios\\Ex 005 - cartão de visita\\Inter.ttc"
     }
@@ -34,9 +45,9 @@ def main(page: ft.Page):
         bgcolor = "#007BFF",
         color = "#FFFFFF",
         style = ft.ButtonStyle(
-            shape = ft.RoundedRectangleBorder(radius=5),
-        
-        )
+            shape = ft.RoundedRectangleBorder(radius=5)
+        ),
+        on_click=seguir
     )
 
     colunaPrincipal = ft.Column(
