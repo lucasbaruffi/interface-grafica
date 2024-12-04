@@ -6,7 +6,7 @@ def main(page: ft.Page):
 
         valor_informado = box.value
 
-        if type(valor_informado) != int:
+        if int(valor_informado):
             novo_texto = "Digite apenas Números"
         else:
             import requests
