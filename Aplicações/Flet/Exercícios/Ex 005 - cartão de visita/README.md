@@ -48,3 +48,9 @@ Hover no Botão:
 Transição suave para as mudanças de cor (ex: transition: background-color 0.3s).
 Estrutura Recomendada no Flet
 Use um Container para o cartão e elementos como Column e Row para organizar o layout interno.
+
+### **Solução**
+
+<img width="233" alt="Captura de tela 2024-12-04 161846" src="https://github.com/user-attachments/assets/bef74d58-a4cb-4718-935b-b0488212577c">
+
+<img width="231" alt="Captura de tela 2024-12-04 161722" src="https://github.com/user-attachments/assets/df0a36e2-7ef8-4c42-b68e-8c2d89cfb112">
